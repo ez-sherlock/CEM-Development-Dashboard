@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="text-white text-sm p-4 bg-black flex justify-between items-center">
+        <p>
+            CEM Developement Dashboard
+        </p>
+        <div class="flex gap-3">
+            <p>Skip to Main Content</p>
+            <p>|</p>
+            <p>Login</p>
+            <p>|</p>
+            <p>Register</p>
+        </div>
+    </div>
+
+    <div class="flex items-center p-4">
+        <img src="./images/BTR-gov-logo.webp" alt="logo" width="72.1px" height="49px">
+        <h1 class="w-full text-center uppercase font-semibold text-4xl">CEM Developement Dashboard</h>
+    </div>
+
+    <nav class="flex text-white text-xl font-medium p-3 justify-center gap-8 bg-blue-400">
+        <a href="">Home</a>
+        <a href="">About us</a>
+        <a href="">Dashboard</a>
+    </nav>
+
+    <div class="flex flex-col justify-center items-center mb-12">
+        <img src="./images/cmsdashboard.png" alt="">
+        <div class="-mt-10 bg-white p-4 rounded-xl flex gap-8 shadow-lg">
+            <select name="category" id="category" class=" border-b-2 p-2 w-44">
+                <option value="" class=" hidden" disabled selected>Category</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <select name="District" id="District" class=" border-b-2 p-2 w-44">
+                <option value="" class=" hidden" disabled selected>District</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <select name="Department" id="Department" class=" border-b-2 p-2 w-44">
+                <option value="" class=" hidden" disabled selected>Department</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <select name="Scheme/Project" id="Scheme/Project" class=" border-b-2 p-2 w-44">
+                <option value="" class=" hidden" disabled selected>Scheme/Project</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <div class="bg-[#00B6F0] rounded flex items-center justify-center  w-9 h-9">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#ffff" viewBox="0 0 50 50" width="20px" height="20px">
+                    <path
+                        d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-6">
+
+        <div class="px-12 py-8 grid grid-cols-2 border-[#DEDEDE] border-2 items-center gap-8 rounded-lg ">
+            <img src="./images/map.webp" alt="">
+            <div>
+                <h2 class="text-2xl font-semibold border-b-2 text-center pb-2 mb-2">Most Completed</h2>
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <div class="flex flex-col">
+                            <p class="text-lg font-semibold">Mission Mode</p>
+                            <p class="text-[#848484] text-sm mb-2">BTR Accord project little one...</p>
+                            <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+                        </div>
+                        <p class="text-2xl text-[#00B6F0] font-bold">40%</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex flex-col">
+                            <p class="text-lg font-semibold">Mission Mode</p>
+                            <p class="text-[#848484] text-sm mb-2">BTR Accord project little one...</p>
+                            <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+                        </div>
+                        <p class="text-2xl text-[#00B6F0] font-bold">40%</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex flex-col">
+                            <p class="text-lg font-semibold">Mission Mode</p>
+                            <p class="text-[#848484] text-sm mb-2">BTR Accord project little one...</p>
+                            <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+                        </div>
+                        <p class="text-2xl text-[#00B6F0] font-bold">40%</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex flex-col">
+                            <p class="text-lg font-semibold">Mission Mode</p>
+                            <p class="text-[#848484] text-sm mb-2">BTR Accord project little one...</p>
+                            <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+                        </div>
+                        <p class="text-2xl text-[#00B6F0] font-bold">40%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-12 my-12">
+            <div>
+                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
+                    <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
+                    <canvas id="barChart" width="444px" height="227px"></canvas>
+                </div>
+                <p class="text-3xl font-semibold text-center">District Wise</p>
+            </div>
+
+            <div>
+                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
+                    <!-- <canvas id="polarChart"></canvas> -->
+                </div>
+                <p class="text-3xl font-semibold text-center">Scheme/Project Wise</p>
+            </div>
+            <div>
+                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
+                    <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <p class="text-3xl font-semibold text-center">Year Wise</p>
+            </div>
+            <div>
+                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
+                    <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
+                    <canvas id="horzBarChart"></canvas>
+                </div>
+                <p class="text-3xl font-semibold text-center">Department Wise</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"
+        integrity="sha512-Lii3WMtgA0C0qmmkdCpsG0Gjr6M0ajRyQRQSbTF6BsrVh/nhZdHpVZ76iMIPvQwz1eoXC3DmAg9K51qT5/dEVg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

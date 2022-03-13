@@ -17,7 +17,7 @@ const config = {
     type: 'bar',
     data: data,
     options: {
-        responsive: true,
+        responsive: false,
         scales: {
             y: {
                 min: 0,
@@ -41,51 +41,6 @@ const ctx = document.getElementById('barChart').getContext('2d');
 new Chart(ctx, config);
 
 
-
-// Polar Chart
-
-// var polarData = {
-//     datasets: [{
-//         data: [52.8, 89.8, 9.8, 45.8,],
-
-//         backgroundColor: [
-//             "#000000",
-//             "#3B5998",
-//             "#a6b1b7",
-//             "#1da1f2",
-//             "#bd081c"
-//         ],
-//         label: 'My dataset', // for legend
-//     }],
-//     labels: [
-//         "Blog",
-//         "Facebook",
-//         "Instagram",
-//         "Twitter",
-//         "Pinterest"
-//     ],
-// };
-// const plotPolarData = document.getElementById('polarChart').getContext('2d');
-// new Chart(plotPolarData, {
-//     data: polarData,
-//     type: 'polarArea',
-//     options: {
-//         legend: {
-//             display: false,
-//         },
-//         scale: {
-//             display: false
-//         },
-//         plugins: {
-//             legend: {
-//                 display: false
-//             }
-//         }
-//     }
-// });
-
-
-
 // Line Chart
 
 const lineChartData = {
@@ -107,7 +62,7 @@ const lineChartConfig = {
     type: 'line',
     data: lineChartData,
     options: {
-        responsive: true,
+        responsive: false,
         scales: {
             y: {
                 min: 0,
@@ -155,7 +110,7 @@ const horzBarChartConfig = {
                 borderWidth: 2,
             }
         },
-        responsive: true,
+        responsive: false,
         scales: {
             x: {
                 min: 0,
@@ -180,3 +135,33 @@ const horzBarChartConfig = {
 };
 const plotHorzBarChart = document.getElementById('horzBarChart').getContext('2d');
 new Chart(plotHorzBarChart, horzBarChartConfig)
+
+
+
+
+const polarData = {
+    labels: ['Team 1', 'Team 2', 'Team 3', 'Team 4'],
+    datasets: [
+        {
+            label: 'Dataset 1',
+            data: [52.8, 89.8, 9.8, 45.8,],
+            backgroundColor: ['#22C83B', '#00B6F0', '#E6E5E6', '#0086B0'],
+        }
+    ]
+};
+
+const polarConfig = {
+    type: 'polarArea',
+    data: polarData,
+    options: {
+        responsive: false,
+        plugins: {
+            legend: {
+                display: false,
+                position: 'right',
+            },
+        }
+    },
+};
+const x = document.getElementById('polar').getContext('2d');
+new Chart(x, polarConfig)

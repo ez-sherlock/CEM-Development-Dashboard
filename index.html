@@ -11,21 +11,22 @@
 </head>
 
 <body>
-
-    <div class="text-white text-sm p-4 bg-black flex justify-between items-center">
-        <p>
-            CEM Developement Dashboard
-        </p>
-        <div class="flex gap-3">
-            <p>Skip to Main Content</p>
-            <p>|</p>
-            <p>Login</p>
-            <p>|</p>
-            <p>Register</p>
+    <div class="bg-black">
+        <div class="text-white text-sm p-4 bg-black flex justify-between items-center  m-auto max-w-[75rem]">
+            <p>
+                CEM Developement Dashboard
+            </p>
+            <div class="flex gap-3">
+                <p>Skip to Main Content</p>
+                <p>|</p>
+                <p>Login</p>
+                <p>|</p>
+                <p>Register</p>
+            </div>
         </div>
     </div>
 
-    <div class="flex items-center p-4">
+    <div class="flex items-center p-4 max-w-[75rem] m-auto">
         <img src="./images/BTR-gov-logo.webp" alt="logo" width="72.1px" height="49px">
         <h1 class="w-full text-center uppercase font-semibold text-4xl">CEM Developement Dashboard</h>
     </div>
@@ -76,7 +77,15 @@
         </div>
     </div>
 
-    <div class="p-6">
+
+    <div class="p-6 max-w-[77rem] m-auto ">
+
+        <div class="text-right m-auto mb-4 max-w-[77rem]">
+
+            <select class="border p-2 rounded-lg border-[#DEDEDE]">
+                <option value="30"> Last 30 days</option>
+            </select>
+        </div>
 
         <div class="px-12 py-8 grid grid-cols-2 border-[#DEDEDE] border-2 items-center gap-8 rounded-lg ">
             <img src="./images/map.webp" alt="">
@@ -119,35 +128,40 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-2 gap-12 my-12">
-            <div>
-                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
-                    <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
-                    <canvas id="barChart" width="444px" height="227px"></canvas>
+        <div class="flex flex-col w-full items-center justify-center gap-12 my-12">
+            <div class="flex gap-12">
+                <div class=" m-auto">
+                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
+                        <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
+                        <canvas id="barChart" class="m-auto" width="450px" height="350px"></canvas>
+                    </div>
+                    <p class="text-3xl font-semibold text-center">District Wise</p>
                 </div>
-                <p class="text-3xl font-semibold text-center">District Wise</p>
+
+                <div class=" m-auto">
+                    <div class="p-8 flex justify-center border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
+                        <canvas id="polar" class="h-1/2"></canvas>
+                    </div>
+                    <p class="text-3xl font-semibold text-center">Scheme/Project Wise</p>
+                </div>
+            </div>
+            <div class="flex gap-12">
+                <div class=" m-auto">
+                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
+                        <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
+                        <canvas id="lineChart" class="m-auto" width="450px" height="350px"></canvas>
+                    </div>
+                    <p class="text-3xl font-semibold text-center">Year Wise</p>
+                </div>
+                <div class=" m-auto">
+                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
+                        <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
+                        <canvas id="horzBarChart" class="m-auto" width="450px" height="350px"></canvas>
+                    </div>
+                    <p class="text-3xl font-semibold text-center">Department Wise</p>
+                </div>
             </div>
 
-            <div>
-                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
-                    <!-- <canvas id="polarChart"></canvas> -->
-                </div>
-                <p class="text-3xl font-semibold text-center">Scheme/Project Wise</p>
-            </div>
-            <div>
-                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
-                    <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
-                    <canvas id="lineChart"></canvas>
-                </div>
-                <p class="text-3xl font-semibold text-center">Year Wise</p>
-            </div>
-            <div>
-                <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg">
-                    <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
-                    <canvas id="horzBarChart"></canvas>
-                </div>
-                <p class="text-3xl font-semibold text-center">Department Wise</p>
-            </div>
         </div>
 
     </div>
@@ -156,9 +170,19 @@
     <div class="bg-[#F6F7FB] p-12">
         <h1 class="text-[40px] font-bold text-center">BTR Progress Accord</h1>
 
-        <div class="grid grid-cols-2 gap-8 p-4">
-            <div class="bg-white flex gap-4 p-4 rounded-lg ">
-                <img src="./images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+        <div class="grid grid-cols-2 gap-8 m-auto items-center max-w-[77rem] p-4 pb-20">
+
+            <div class="bg-white flex gap-4 p-4 rounded-lg shadow-md ">
+                <div class="w-full h-full relative">
+                    <button class="absolute right-4 top-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+                            <path fill="#ffff"
+                                d="m -936.69875,909.3642 c -0.88914,-0.047 -1.75905,0.2466 -2.4043,0.8925 -1.29049,1.2919 -1.17491,3.4894 0.25977,4.9258 l 0.51562,0.5156 4.66016,4.6641 4.6582,-4.6641 0.51563,-0.5156 c 1.43474,-1.4364 1.55025,-3.6339 0.25976,-4.9258 -1.29048,-1.2918 -3.48322,-1.1745 -4.91797,0.2618 l -0.51562,0.5175 -0.51758,-0.5175 c -0.71734,-0.7181 -1.62453,-1.1072 -2.51367,-1.1543 z"
+                                transform="translate(942 -906.362)" />
+                        </svg>
+                    </button>
+                    <img src="./images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+                </div>
                 <div class="flex flex-col gap-2">
 
                     <div class="flex justify-between">
@@ -169,7 +193,7 @@
                     <div class="flex text-sm text-[#848484] justify-between">
                         <p>Kolkata</p>
                         -
-                        <a href="#">Show on map</a>
+                        <a class="text-[#00B6F0]" href="#">Show on map</a>
                         -
                         <p>3.9 km from center</p>
 
@@ -188,6 +212,212 @@
                     </button>
                 </div>
             </div>
+
+            <div class="bg-white flex gap-4 p-4 rounded-lg shadow-md ">
+                <div class="w-full h-full relative">
+                    <button class="absolute right-4 top-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+                            <path fill="#ffff"
+                                d="m -936.69875,909.3642 c -0.88914,-0.047 -1.75905,0.2466 -2.4043,0.8925 -1.29049,1.2919 -1.17491,3.4894 0.25977,4.9258 l 0.51562,0.5156 4.66016,4.6641 4.6582,-4.6641 0.51563,-0.5156 c 1.43474,-1.4364 1.55025,-3.6339 0.25976,-4.9258 -1.29048,-1.2918 -3.48322,-1.1745 -4.91797,0.2618 l -0.51562,0.5175 -0.51758,-0.5175 c -0.71734,-0.7181 -1.62453,-1.1072 -2.51367,-1.1543 z"
+                                transform="translate(942 -906.362)" />
+                        </svg>
+                    </button>
+                    <img src="./images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+                </div>
+                <div class="flex flex-col gap-2">
+
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-xl">Red Arrow Residency</p>
+                        <p class="flex items-center gap-1"><img src="./images/star.svg" alt="star"> 4.8</p>
+                    </div>
+
+                    <div class="flex text-sm text-[#848484] justify-between">
+                        <p>Kolkata</p>
+                        -
+                        <a class="text-[#00B6F0]" href="#">Show on map</a>
+                        -
+                        <p>3.9 km from center</p>
+
+                    </div>
+
+                    <p>
+                        Located in kolkata a few steps from india Museum,
+                        Red arrow Residency features rooms wit city views
+                        and free Wi-Fi.
+                    </p>
+
+                    <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+
+                    <button class="bg-[#00B6F0] flex justify-center items-center w-44 h-11 text-white rounded-md">
+                        Show Prices
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white flex gap-4 p-4 rounded-lg shadow-md ">
+                <div class="w-full h-full relative">
+                    <button class="absolute right-4 top-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+                            <path fill="#ffff"
+                                d="m -936.69875,909.3642 c -0.88914,-0.047 -1.75905,0.2466 -2.4043,0.8925 -1.29049,1.2919 -1.17491,3.4894 0.25977,4.9258 l 0.51562,0.5156 4.66016,4.6641 4.6582,-4.6641 0.51563,-0.5156 c 1.43474,-1.4364 1.55025,-3.6339 0.25976,-4.9258 -1.29048,-1.2918 -3.48322,-1.1745 -4.91797,0.2618 l -0.51562,0.5175 -0.51758,-0.5175 c -0.71734,-0.7181 -1.62453,-1.1072 -2.51367,-1.1543 z"
+                                transform="translate(942 -906.362)" />
+                        </svg>
+                    </button>
+                    <img src="./images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+                </div>
+                <div class="flex flex-col gap-2">
+
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-xl">Red Arrow Residency</p>
+                        <p class="flex items-center gap-1"><img src="./images/star.svg" alt="star"> 4.8</p>
+                    </div>
+
+                    <div class="flex text-sm text-[#848484] justify-between">
+                        <p>Kolkata</p>
+                        -
+                        <a class="text-[#00B6F0]" href="#">Show on map</a>
+                        -
+                        <p>3.9 km from center</p>
+
+                    </div>
+
+                    <p>
+                        Located in kolkata a few steps from india Museum,
+                        Red arrow Residency features rooms wit city views
+                        and free Wi-Fi.
+                    </p>
+
+                    <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+
+                    <button class="bg-[#00B6F0] flex justify-center items-center w-44 h-11 text-white rounded-md">
+                        Show Prices
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white flex gap-4 p-4 rounded-lg shadow-md ">
+                <div class="w-full h-full relative">
+                    <button class="absolute right-4 top-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+                            <path fill="#ffff"
+                                d="m -936.69875,909.3642 c -0.88914,-0.047 -1.75905,0.2466 -2.4043,0.8925 -1.29049,1.2919 -1.17491,3.4894 0.25977,4.9258 l 0.51562,0.5156 4.66016,4.6641 4.6582,-4.6641 0.51563,-0.5156 c 1.43474,-1.4364 1.55025,-3.6339 0.25976,-4.9258 -1.29048,-1.2918 -3.48322,-1.1745 -4.91797,0.2618 l -0.51562,0.5175 -0.51758,-0.5175 c -0.71734,-0.7181 -1.62453,-1.1072 -2.51367,-1.1543 z"
+                                transform="translate(942 -906.362)" />
+                        </svg>
+                    </button>
+                    <img src="./images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+                </div>
+                <div class="flex flex-col gap-2">
+
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-xl">Red Arrow Residency</p>
+                        <p class="flex items-center gap-1"><img src="./images/star.svg" alt="star"> 4.8</p>
+                    </div>
+
+                    <div class="flex text-sm text-[#848484] justify-between">
+                        <p>Kolkata</p>
+                        -
+                        <a class="text-[#00B6F0]" href="#">Show on map</a>
+                        -
+                        <p>3.9 km from center</p>
+
+                    </div>
+
+                    <p>
+                        Located in kolkata a few steps from india Museum,
+                        Red arrow Residency features rooms wit city views
+                        and free Wi-Fi.
+                    </p>
+
+                    <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+
+                    <button class="bg-[#00B6F0] flex justify-center items-center w-44 h-11 text-white rounded-md">
+                        Show Prices
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white flex gap-4 p-4 rounded-lg shadow-md ">
+                <div class="w-full h-full relative">
+                    <button class="absolute right-4 top-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+                            <path fill="#ffff"
+                                d="m -936.69875,909.3642 c -0.88914,-0.047 -1.75905,0.2466 -2.4043,0.8925 -1.29049,1.2919 -1.17491,3.4894 0.25977,4.9258 l 0.51562,0.5156 4.66016,4.6641 4.6582,-4.6641 0.51563,-0.5156 c 1.43474,-1.4364 1.55025,-3.6339 0.25976,-4.9258 -1.29048,-1.2918 -3.48322,-1.1745 -4.91797,0.2618 l -0.51562,0.5175 -0.51758,-0.5175 c -0.71734,-0.7181 -1.62453,-1.1072 -2.51367,-1.1543 z"
+                                transform="translate(942 -906.362)" />
+                        </svg>
+                    </button>
+                    <img src="./images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+                </div>
+                <div class="flex flex-col gap-2">
+
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-xl">Red Arrow Residency</p>
+                        <p class="flex items-center gap-1"><img src="./images/star.svg" alt="star"> 4.8</p>
+                    </div>
+
+                    <div class="flex text-sm text-[#848484] justify-between">
+                        <p>Kolkata</p>
+                        -
+                        <a class="text-[#00B6F0]" href="#">Show on map</a>
+                        -
+                        <p>3.9 km from center</p>
+
+                    </div>
+
+                    <p>
+                        Located in kolkata a few steps from india Museum,
+                        Red arrow Residency features rooms wit city views
+                        and free Wi-Fi.
+                    </p>
+
+                    <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+
+                    <button class="bg-[#00B6F0] flex justify-center items-center w-44 h-11 text-white rounded-md">
+                        Show Prices
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white flex gap-4 p-4 rounded-lg shadow-md ">
+                <div class="w-full h-full relative">
+                    <button class="absolute right-4 top-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
+                            <path fill="#ffff"
+                                d="m -936.69875,909.3642 c -0.88914,-0.047 -1.75905,0.2466 -2.4043,0.8925 -1.29049,1.2919 -1.17491,3.4894 0.25977,4.9258 l 0.51562,0.5156 4.66016,4.6641 4.6582,-4.6641 0.51563,-0.5156 c 1.43474,-1.4364 1.55025,-3.6339 0.25976,-4.9258 -1.29048,-1.2918 -3.48322,-1.1745 -4.91797,0.2618 l -0.51562,0.5175 -0.51758,-0.5175 c -0.71734,-0.7181 -1.62453,-1.1072 -2.51367,-1.1543 z"
+                                transform="translate(942 -906.362)" />
+                        </svg>
+                    </button>
+                    <img src="./images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+                </div>
+                <div class="flex flex-col gap-2">
+
+                    <div class="flex justify-between">
+                        <p class="font-semibold text-xl">Red Arrow Residency</p>
+                        <p class="flex items-center gap-1"><img src="./images/star.svg" alt="star"> 4.8</p>
+                    </div>
+
+                    <div class="flex text-sm text-[#848484] justify-between">
+                        <p>Kolkata</p>
+                        -
+                        <a class="text-[#00B6F0]" href="#">Show on map</a>
+                        -
+                        <p>3.9 km from center</p>
+
+                    </div>
+
+                    <p>
+                        Located in kolkata a few steps from india Museum,
+                        Red arrow Residency features rooms wit city views
+                        and free Wi-Fi.
+                    </p>
+
+                    <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
+
+                    <button class="bg-[#00B6F0] flex justify-center items-center w-44 h-11 text-white rounded-md">
+                        Show Prices
+                    </button>
+                </div>
+            </div>
+
         </div>
 
         <div class="flex gap-2 justify-center">
@@ -228,7 +458,9 @@
 
     </div>
 
-    <div class="py-12">
+    <div class="pt-12 pb-20">
+
+
         <h1 class="font-bold text-[40px] text-center mb-12">How its Work</h1>
         <div class="flex justify-center gap-12">
             <div>
@@ -237,9 +469,15 @@
                         class="w-16 absolute -bottom-8 right-12 h-16 bg-[#00B6F0] font-bold text-3xl flex justify-center items-center text-white  rounded-full">
                         01
                     </p>
+                    <svg class="absolute left-[21rem] -bottom-[3rem]" width="318" height="28" viewBox="0 0 318 28"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.2" d="M1 0.5C44 20.6667 167.4 48.9 317 0.5" stroke="black"
+                            stroke-dasharray="5 5" />
+                    </svg>
                     <div class="text-[28px] text-center font-semibold">Project Parameters</div>
                     <div class="text-lg text-[#848484] text-center font-medium">Collect all project parameter</div>
                 </div>
+
             </div>
             <div>
                 <div class="w-[370px] relative h-[189px] border-[1px] border-[#868F9959] p-6">
@@ -247,6 +485,11 @@
                         class="w-16 absolute -bottom-8 right-12 h-16 bg-[#00B6F0] font-bold text-3xl flex justify-center items-center text-white  rounded-full">
                         02
                     </p>
+                    <svg class="absolute left-[21rem] -bottom-[3rem]" width="318" height="28" viewBox="0 0 318 28"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.2" d="M1 0.5C44 20.6667 167.4 48.9 317 0.5" stroke="black"
+                            stroke-dasharray="5 5" />
+                    </svg>
                     <div class="text-[28px] text-center font-semibold">Project Parameters</div>
                     <div class="text-lg text-[#848484] text-center font-medium">Collect all project parameter</div>
                 </div>
@@ -262,7 +505,96 @@
                 </div>
             </div>
         </div>
+
+
     </div>
+
+
+    <!-- Footer -->
+    <footer class="flex justify-center gap-20 items-center  h-[440px]">
+
+        <svg width="224" height="205" viewBox="0 0 224 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M144.905 65.2877V16.6399H221.175V65.2877H144.905Z" fill="#FF9201" />
+            <path
+                d="M221.175 65.2875L189.32 40.6169C185.427 37.9403 180.273 37.9262 176.365 40.5787C165.419 48.0094 144.905 65.2875 144.905 65.2875H221.175Z"
+                fill="#BCDCFF" />
+            <path
+                d="M177.614 39.864H177.391L144.904 16.6477L144.905 65.2875C144.905 65.2875 165.419 48.0094 176.364 40.5787C176.766 40.3061 177.189 40.0801 177.614 39.864Z"
+                fill="#A7D0FE" />
+            <path
+                d="M188.69 39.8641H188.022C188.464 40.0901 188.902 40.3302 189.318 40.6169L221.175 65.2875V16.6477L188.69 39.8641Z"
+                fill="#A7D0FE" />
+            <path
+                d="M221.175 16.6478L189.319 41.3184C185.427 43.995 180.273 44.0091 176.365 41.3566C165.418 33.9259 144.905 16.6478 144.905 16.6478H221.175Z"
+                fill="white" />
+            <g clip-path="url(#clip0_0_1)">
+                <path
+                    d="M190.543 80.3055L132.191 23.2616C124.906 16.1377 113.174 16.1377 105.888 23.2616L47.5364 80.3055V171.52H190.543V80.3055Z"
+                    fill="#FF9201" />
+                <rect x="67.8401" y="38.3999" width="102.4" height="133.12" rx="5.12" fill="white" />
+                <g clip-path="url(#clip1_0_1)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M93.4401 83.8399C98.742 83.8399 103.04 79.5418 103.04 74.2399C103.04 68.9379 98.742 64.6399 93.4401 64.6399C88.1381 64.6399 83.8401 68.9379 83.8401 74.2399C83.8401 79.5418 88.1381 83.8399 93.4401 83.8399ZM93.4401 89.5999C101.923 89.5999 108.8 82.723 108.8 74.2399C108.8 65.7568 101.923 58.8799 93.4401 58.8799C84.957 58.8799 78.0801 65.7568 78.0801 74.2399C78.0801 82.723 84.957 89.5999 93.4401 89.5999Z"
+                        fill="#2EC5CE" />
+                    <rect x="113.92" y="65.2798" width="46.08" height="7.68" rx="0.64" fill="#2EC5CE" />
+                    <rect opacity="0.4" x="113.92" y="76.7998" width="20.48" height="6.4" rx="0.64" fill="#2EC5CE" />
+                </g>
+                <path
+                    d="M190.543 171.52L130.814 125.262C123.515 120.244 113.852 120.217 106.524 125.191C85.9999 139.123 47.5364 171.52 47.5364 171.52H190.543Z"
+                    fill="#FFDC81" />
+                <path
+                    d="M108.865 123.851H108.447L47.5364 81.4785V171.52C47.5364 171.52 85.9999 139.124 106.521 125.191C107.276 124.68 108.068 124.256 108.865 123.851Z"
+                    fill="#FFCA00" />
+                <path
+                    d="M129.633 123.851H128.381C129.21 124.275 130.031 124.725 130.812 125.262L190.544 171.52V81.4785L129.633 123.851Z"
+                    fill="#FFB800" />
+            </g>
+            <path d="M2.82446 188.168V139.52H79.0948V188.168H2.82446Z" fill="#FF9201" />
+            <path
+                d="M79.0953 188.168L47.2397 163.497C43.3471 160.82 38.1932 160.806 34.2851 163.459C23.3389 170.89 2.82495 188.168 2.82495 188.168H79.0953Z"
+                fill="#BCDCFF" />
+            <path
+                d="M35.5337 162.744H35.3105L2.82373 139.528L2.82498 188.168C2.82498 188.168 23.3389 170.89 34.2837 163.459C34.6862 163.186 35.1085 162.96 35.5337 162.744Z"
+                fill="#A7D0FE" />
+            <path
+                d="M46.61 162.744H45.9419C46.384 162.97 46.8218 163.21 47.2385 163.497L79.0955 188.168V139.528L46.61 162.744Z"
+                fill="#A7D0FE" />
+            <path
+                d="M79.0948 139.528L47.2392 164.198C43.3466 166.875 38.1927 166.889 34.2846 164.236C23.3384 156.806 2.82446 139.528 2.82446 139.528H79.0948Z"
+                fill="white" />
+            <circle cx="185.6" cy="156.16" r="30.72" fill="white" />
+            <g opacity="0.4">
+                <path
+                    d="M193.28 146.823C193.28 151.362 189.596 155.041 185.051 155.041C180.507 155.041 176.823 151.362 176.823 146.823C176.823 142.285 180.507 138.605 185.051 138.605C189.596 138.605 193.28 142.285 193.28 146.823Z"
+                    fill="#2EC5CE" />
+                <path
+                    d="M200.96 173.669C200.96 173.669 190.608 173.771 183.954 173.669C178.582 173.586 170.24 173.669 170.24 173.669C170.24 173.669 172.434 157.233 185.6 157.233C198.766 157.233 200.96 173.669 200.96 173.669Z"
+                    fill="#2EC5CE" />
+            </g>
+            <circle cx="208.64" cy="133.12" r="12.8" fill="#2EC5CE" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M208.64 127.146C209.052 127.146 209.387 127.481 209.387 127.893V132.373H213.867C214.279 132.373 214.613 132.707 214.613 133.12C214.613 133.532 214.279 133.866 213.867 133.866H209.387V138.346C209.387 138.759 209.052 139.093 208.64 139.093C208.227 139.093 207.893 138.759 207.893 138.346V133.866H203.413C203.001 133.866 202.667 133.532 202.667 133.12C202.667 132.707 203.001 132.373 203.413 132.373H207.893V127.893C207.893 127.481 208.227 127.146 208.64 127.146Z"
+                fill="white" />
+            <defs>
+                <clipPath id="clip0_0_1">
+                    <rect width="153.6" height="153.6" fill="white" transform="translate(42.24 17.9199)" />
+                </clipPath>
+                <clipPath id="clip1_0_1">
+                    <rect width="81.92" height="30.72" fill="white" transform="translate(78.0801 58.8799)" />
+                </clipPath>
+            </defs>
+        </svg>
+
+        <div class="flex flex-col gap-8">
+            <h1 class="text-[50px] max-w-[38rem] text-white font-bold">Join 569 more people in the waitlist</h1>
+            <div class="flex">
+                <input class=" rounded-l-lg px-4 w-80" type="email" placeholder="Your work Email Address here">
+                <button class="bg-[#1E1E1E] rounded-r-lg text-white text-[17px] w-48 h-16" type="submit">Join the
+                    waitlist</button>
+            </div>
+        </div>
+
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"
         integrity="sha512-Lii3WMtgA0C0qmmkdCpsG0Gjr6M0ajRyQRQSbTF6BsrVh/nhZdHpVZ76iMIPvQwz1eoXC3DmAg9K51qT5/dEVg=="

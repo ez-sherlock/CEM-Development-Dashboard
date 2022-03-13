@@ -14,24 +14,25 @@ progress {
 
 progress::-moz-progress-bar {
     border: none;
-
     background: lightcolor;
     border-radius: 20px;
-
 }
 
 progress::-webkit-progress-value {
     background: #22C83B;
     border: none;
-
     border-radius: 20px;
-
 }
 
 progress::-webkit-progress-bar {
     background: #F2F2F2;
     border-radius: 20px;
     border: none;
+}
 
-
+footer {
+    background: url('./images/OnPaste.20220313-223531.png'), url('./images/OnPaste.20220313-223009.png'), #00B6F0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
 }

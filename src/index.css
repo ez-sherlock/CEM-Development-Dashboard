@@ -31,7 +31,7 @@ progress::-webkit-progress-bar {
 }
 
 footer {
-    background: url('./images/OnPaste.20220313-223531.png'), url('./images/OnPaste.20220313-223009.png'), #00B6F0;
+    background: url('../images/OnPaste.20220313-223531.png'), url('../images/OnPaste.20220313-223009.png'), #00B6F0;
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: right;

@@ -512,8 +512,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 24rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-16 {
+  top: 4rem;
+}
+
+.top-\[12rem\] {
+  top: 12rem;
+}
+
+.right-\[8rem\] {
+  right: 8rem;
+}
+
 .m-auto {
   margin: auto;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .my-12 {
@@ -593,6 +617,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 16rem;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .w-14 {
   width: 3.5rem;
 }
@@ -635,6 +663,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .w-40 {
   width: 10rem;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .max-w-\[75rem\] {
@@ -711,6 +743,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-20 {
   gap: 5rem;
+}
+
+.gap-28 {
+  gap: 7rem;
 }
 
 .rounded-xl {
@@ -992,6 +1028,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: 395px;
   }
 
+  .sm\:h-16 {
+    height: 4rem;
+  }
+
   .sm\:w-\[72px\] {
     width: 72px;
   }
@@ -1118,8 +1158,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+@media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
+  }
+}
+
 @media (min-width: 1280px) {
   .xl\:flex-row {
     flex-direction: row;
+  }
+
+  .xl\:p-0 {
+    padding: 0px;
   }
 }

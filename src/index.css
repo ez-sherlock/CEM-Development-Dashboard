@@ -36,3 +36,11 @@ footer {
     background-size: contain;
     background-position-x: right;
 }
+
+@media (max-width:40rem) {
+
+    .email--input,
+    .email--input::-webkit-input-placeholder {
+        font-size: 11px;
+    }
+}

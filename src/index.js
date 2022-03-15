@@ -18,6 +18,7 @@ const config = {
     data: data,
     options: {
         responsive: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 min: 0,
@@ -63,6 +64,8 @@ const lineChartConfig = {
     data: lineChartData,
     options: {
         responsive: true,
+        maintainAspectRatio: false,
+
         scales: {
             y: {
                 min: 0,
@@ -111,6 +114,7 @@ const horzBarChartConfig = {
             }
         },
         responsive: true,
+        maintainAspectRatio: false,
         scales: {
             x: {
                 min: 0,
@@ -127,7 +131,7 @@ const horzBarChartConfig = {
                 position: 'right',
             },
             title: {
-                display: true,
+                display: false,
                 text: 'Chart.js Horizontal Bar Chart'
             }
         }
@@ -155,6 +159,7 @@ const polarConfig = {
     data: polarData,
     options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,

@@ -17,7 +17,7 @@ const config = {
     type: 'bar',
     data: data,
     options: {
-        responsive: false,
+        responsive: true,
         scales: {
             y: {
                 min: 0,
@@ -62,7 +62,7 @@ const lineChartConfig = {
     type: 'line',
     data: lineChartData,
     options: {
-        responsive: false,
+        responsive: true,
         scales: {
             y: {
                 min: 0,
@@ -110,7 +110,7 @@ const horzBarChartConfig = {
                 borderWidth: 2,
             }
         },
-        responsive: false,
+        responsive: true,
         scales: {
             x: {
                 min: 0,
@@ -154,7 +154,7 @@ const polarConfig = {
     type: 'polarArea',
     data: polarData,
     options: {
-        responsive: false,
+        responsive: true,
         plugins: {
             legend: {
                 display: false,

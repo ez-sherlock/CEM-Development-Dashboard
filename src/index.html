@@ -114,9 +114,9 @@
         </div>
 
         <div
-            class="px-12 py-8 grid grid-cols-none sm:grid-cols-2 border-[#DEDEDE] border-2 items-center gap-8 rounded-lg ">
+            class="p-6 sm:px-12 sm:py-8 w-full grid place-content-center place-items-center grid-cols-none sm:grid-cols-2 border-[#DEDEDE] border-2 items-center gap-8 rounded-lg ">
             <img src="../images/map.webp" alt="">
-            <div>
+            <div class="w-full">
                 <h2 class="text-2xl font-semibold border-b-2 text-center pb-2 mb-2">Most Completed</h2>
                 <div class="flex flex-col gap-2">
                     <div class="flex justify-between items-center">
@@ -158,32 +158,32 @@
         <div class="flex flex-col w-full items-center justify-center gap-12 my-12">
             <div class="flex gap-12">
                 <div class=" m-auto">
-                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
+                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg ">
                         <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
-                        <canvas id="barChart" class="m-auto" width="450px" height="350px"></canvas>
+                        <canvas id="barChart" class="m-auto"></canvas>
                     </div>
                     <p class="text-3xl font-semibold text-center">District Wise</p>
                 </div>
 
-                <div class=" m-auto">
-                    <div class="p-8 flex justify-center border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
-                        <canvas id="polar" class="h-1/2"></canvas>
+                <div class="m-auto">
+                    <div class="p-8 flex justify-center border-[#DEDEDE] border-2 mb-4 rounded-lg ">
+                        <canvas id="polar" class="m-auto"></canvas>
                     </div>
                     <p class="text-3xl font-semibold text-center">Scheme/Project Wise</p>
                 </div>
             </div>
             <div class="flex gap-12">
                 <div class=" m-auto">
-                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
+                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg ">
                         <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
-                        <canvas id="lineChart" class="m-auto" width="450px" height="350px"></canvas>
+                        <canvas id="lineChart" class="m-auto"></canvas>
                     </div>
                     <p class="text-3xl font-semibold text-center">Year Wise</p>
                 </div>
                 <div class=" m-auto">
-                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg h-[470px] w-[569px] ">
+                    <div class="p-8 border-[#DEDEDE] border-2 mb-4 rounded-lg ">
                         <p class="text-[28px] font-medium mb-4">Worldwide Number of Elctric Cars</p>
-                        <canvas id="horzBarChart" class="m-auto" width="450px" height="350px"></canvas>
+                        <canvas id="horzBarChart" class="m-auto"></canvas>
                     </div>
                     <p class="text-3xl font-semibold text-center">Department Wise</p>
                 </div>
@@ -194,12 +194,12 @@
     </div>
 
     <!-- BRT Progress Accord -->
-    <div class="bg-[#F6F7FB] p-12">
-        <h1 class="text-[40px] font-bold text-center">BTR Progress Accord</h1>
+    <div class="bg-[#F6F7FB] p-4 sm:p-12">
+        <h1 class="text-3xl sm:text-[40px] py-7 font-bold text-center">BTR Progress Accord</h1>
 
-        <div class="grid grid-cols-2 gap-8 m-auto items-center max-w-[77rem] p-4 pb-20">
+        <div class="grid grid-cols-none md:grid-cols-2 gap-8 m-auto items-center max-w-[77rem] pb-20">
 
-            <div class="bg-white flex gap-4 p-4 rounded-lg shadow-md ">
+            <div class="bg-white flex items-center gap-4 p-4 rounded-lg shadow-md ">
                 <div class="w-full h-full relative">
                     <button class="absolute right-4 top-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16">
@@ -208,16 +208,17 @@
                                 transform="translate(942 -906.362)" />
                         </svg>
                     </button>
-                    <img src="../images/house.PNG" width="207px" height="211px" class="rounded-lg" alt="">
+                    <img src="../images/house.PNG" class="w-full rounded-lg" alt="">
                 </div>
                 <div class="flex flex-col gap-2">
 
-                    <div class="flex justify-between">
-                        <p class="font-semibold text-xl">Red Arrow Residency</p>
-                        <p class="flex items-center gap-1"><img src="../images/star.svg" alt="star"> 4.8</p>
+                    <div class="flex items-center justify-between">
+                        <p class="font-semibold text-xs sm:text-xl">Red Arrow Residency</p>
+                        <p class="flex items-center justify-center text-[9px] sm:text-base gap-1"><img
+                                src="../images/star.svg" alt="star" class="w-1/3 sm:w-full"> 4.8</p>
                     </div>
 
-                    <div class="flex text-sm text-[#848484] justify-between">
+                    <div class="flex text-[8.3px] sm:text-sm text-[#848484] justify-between">
                         <p>Kolkata</p>
                         -
                         <a class="text-[#00B6F0]" href="#">Show on map</a>
@@ -226,7 +227,7 @@
 
                     </div>
 
-                    <p>
+                    <p class="text-[8px] sm:text-base">
                         Located in kolkata a few steps from india Museum,
                         Red arrow Residency features rooms wit city views
                         and free Wi-Fi.
@@ -234,7 +235,8 @@
 
                     <progress id="file" value="32" max="100" class="h-1 rounded-xl"> 40% </progress>
 
-                    <button class="bg-[#00B6F0] flex justify-center items-center w-44 h-11 text-white rounded-md">
+                    <button
+                        class="bg-[#00B6F0] flex justify-center items-center text-[12px] sm:text-base w-28 h-7 sm:w-44 sm:h-11 text-white rounded-md">
                         Show Prices
                     </button>
                 </div>

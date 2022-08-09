@@ -12,7 +12,7 @@
     <title>CEM Dashboard</title>
   </head>
 
-  <body>
+  <body class="bg-white pb-4">
     <nav class="bg-[#1E1E1E]">
       <div class="max-w-[1200px] m-auto p-4">
         <div class="flex justify-between items-center">
@@ -110,9 +110,29 @@
         </div>
       </div>
     </nav>
+    <div class="flex items-center justify-center gap-40 flex-col py-8">
+      <h1 class="text-[#1E1E1E] font-bold text-center text-5xl">
+        Overall Progress
+      </h1>
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center relative"
+      >
+        <p class="text-center text-[#00B6F0] absolute">Point Scored</p>
+
+        <canvas
+          id="polar"
+          class="w-full h-full max-w-[555px] max-h-[436px]"
+        ></canvas>
+
+        <canvas
+          id="bar-chart-grouped"
+          class="w-full h-full max-w-[555px] max-h-[436px]"
+        ></canvas>
+      </div>
+    </div>
     <div class="bg-[#F6F7FB]">
       <div
-        class="max-w-[1200px] m-auto p-4 grid grid-cols-none md:grid-cols-3 gap-6 items-start"
+        class="max-w-[1200px] m-auto p-4 grid grid-cols-none md:grid-cols-3 gap-6 items-start divide-[#9E9EA1]"
       >
         <div class="collapse">
           <input type="checkbox" class="peer" />
@@ -375,6 +395,236 @@
         </div>
       </div>
     </div>
+    <div class="bg-white">
+      <div
+        class="max-w-[1200px] m-auto p-4 grid grid-cols-none md:grid-cols-3 gap-6 items-start"
+      >
+        <div class="collapse">
+          <input type="checkbox" class="peer" />
+          <div
+            class="collapse-title flex justify-between items-center bg-white text-black font-bold text-xl b-0 peer-checked:rounded-b-none peer-checked:border-b-0 md:border border-[#DEDEDE] rounded-xl"
+          >
+            <p>Beneficiaries Details</p>
+            <svg
+              width="23"
+              height="14"
+              viewBox="0 0 23 14"
+              fill="none"
+              class="rotate-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 2L11.5 11.5L2 2"
+                stroke="#1E1E1E"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="collapse-content bg-[#F6F7FB] peer-checked:border md:peer-checked:border-t-0 border-[#DEDEDE] rounded-xl md:rounded-b-xl md:rounded-t-none peer-checked:pt-3 mx-4 md:mx-0"
+          >
+            <div class="py-3 border-b border-[#DEDEDE]">
+              <p class="text-[#848484] text-lg">Total Beneficiaries::</p>
+              <p class="font-semibold text-xl text-black">$1200</p>
+            </div>
+            <div class="py-3 border-b border-[#DEDEDE]">
+              <p class="text-[#848484] text-lg">Approved:</p>
+              <p class="font-semibold text-xl text-black">Yes</p>
+            </div>
+            <div class="py-3 border-b border-[#DEDEDE]">
+              <p class="text-[#848484] text-lg">Rejected:</p>
+              <p class="font-semibold text-xl text-black">No</p>
+            </div>
+            <div class="py-3 border-b border-[#DEDEDE]">
+              <p class="text-[#848484] text-lg">District Wise:</p>
+              <p class="font-semibold text-xl text-black">15%</p>
+            </div>
+            <div class="py-3">
+              <p class="text-[#848484] text-lg">Average:</p>
+              <p class="font-semibold text-xl text-black">85%</p>
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <input type="checkbox" class="peer" />
+          <div
+            class="collapse-title flex justify-between items-center bg-white text-black font-bold text-xl b-0 peer-checked:rounded-b-none peer-checked:border-b-0 md:border border-[#DEDEDE] rounded-xl"
+          >
+            <p>Completion Details</p>
+            <svg
+              width="23"
+              height="14"
+              viewBox="0 0 23 14"
+              fill="none"
+              class="rotate-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 2L11.5 11.5L2 2"
+                stroke="#1E1E1E"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="collapse-content bg-white peer-checked:border md:peer-checked:border-t-0 border-[#DEDEDE] rounded-xl md:rounded-b-xl md:rounded-t-none peer-checked:pt-3 mx-4 md:mx-0"
+          >
+            <!-- The rectangle above the steps -->
+            <div class="flex flex-col gap-10 relative">
+              <svg
+                class="absolute top-12 left-[26px]"
+                width="5"
+                height="267"
+                viewBox="0 0 5 267"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="0.09375"
+                  y="0.205322"
+                  width="4.65501"
+                  height="266.499"
+                  fill="#00B6F0"
+                />
+              </svg>
+              <div class="flex items-center gap-3 z-10">
+                <svg
+                  width="58"
+                  height="58"
+                  viewBox="0 0 58 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="29.0031" cy="29.167" r="28.5119" fill="#00B6F0" />
+                  <path
+                    d="M27.4903 18.4347C27.5989 18.3695 27.7618 18.3369 27.9791 18.3369H31.9219C32.0305 18.3369 32.1174 18.3804 32.1825 18.4673C32.2694 18.5325 32.3129 18.6193 32.3129 18.728V40.7555C32.3129 40.8641 32.2694 40.9618 32.1825 41.0487C32.1174 41.1139 32.0305 41.1465 31.9219 41.1465H28.1094C28.0008 41.1465 27.903 41.1139 27.8161 41.0487C27.751 40.9618 27.7184 40.8641 27.7184 40.7555V22.8989C27.7184 22.8554 27.6967 22.812 27.6532 22.7685C27.6098 22.7251 27.5663 22.7142 27.5229 22.7359L24.297 23.6157L24.1666 23.6483C23.9711 23.6483 23.8734 23.5288 23.8734 23.2899L23.7756 20.4876C23.7756 20.2703 23.8734 20.1183 24.0689 20.0314L27.4903 18.4347Z"
+                    fill="white"
+                  />
+                </svg>
+                <div class="flex flex-col">
+                  <p class="text-[#848484] text-lg">Timeline 1:</p>
+                  <p class="font-semibold text-2xl text-black">10% (2021)</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 z-10">
+                <svg
+                  width="58"
+                  height="58"
+                  viewBox="0 0 58 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="29.0031" cy="29.167" r="28.5119" fill="#00B6F0" />
+                  <path
+                    d="M27.4903 18.4347C27.5989 18.3695 27.7618 18.3369 27.9791 18.3369H31.9219C32.0305 18.3369 32.1174 18.3804 32.1825 18.4673C32.2694 18.5325 32.3129 18.6193 32.3129 18.728V40.7555C32.3129 40.8641 32.2694 40.9618 32.1825 41.0487C32.1174 41.1139 32.0305 41.1465 31.9219 41.1465H28.1094C28.0008 41.1465 27.903 41.1139 27.8161 41.0487C27.751 40.9618 27.7184 40.8641 27.7184 40.7555V22.8989C27.7184 22.8554 27.6967 22.812 27.6532 22.7685C27.6098 22.7251 27.5663 22.7142 27.5229 22.7359L24.297 23.6157L24.1666 23.6483C23.9711 23.6483 23.8734 23.5288 23.8734 23.2899L23.7756 20.4876C23.7756 20.2703 23.8734 20.1183 24.0689 20.0314L27.4903 18.4347Z"
+                    fill="white"
+                  />
+                </svg>
+                <div class="flex flex-col">
+                  <p class="text-[#848484] text-lg">Timeline 1:</p>
+                  <p class="font-semibold text-2xl text-black">10% (2021)</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 z-10">
+                <svg
+                  width="58"
+                  height="58"
+                  viewBox="0 0 58 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="29.0031" cy="29.167" r="28.5119" fill="#00B6F0" />
+                  <path
+                    d="M27.4903 18.4347C27.5989 18.3695 27.7618 18.3369 27.9791 18.3369H31.9219C32.0305 18.3369 32.1174 18.3804 32.1825 18.4673C32.2694 18.5325 32.3129 18.6193 32.3129 18.728V40.7555C32.3129 40.8641 32.2694 40.9618 32.1825 41.0487C32.1174 41.1139 32.0305 41.1465 31.9219 41.1465H28.1094C28.0008 41.1465 27.903 41.1139 27.8161 41.0487C27.751 40.9618 27.7184 40.8641 27.7184 40.7555V22.8989C27.7184 22.8554 27.6967 22.812 27.6532 22.7685C27.6098 22.7251 27.5663 22.7142 27.5229 22.7359L24.297 23.6157L24.1666 23.6483C23.9711 23.6483 23.8734 23.5288 23.8734 23.2899L23.7756 20.4876C23.7756 20.2703 23.8734 20.1183 24.0689 20.0314L27.4903 18.4347Z"
+                    fill="white"
+                  />
+                </svg>
+                <div class="flex flex-col">
+                  <p class="text-[#848484] text-lg">Timeline 1:</p>
+                  <p class="font-semibold text-2xl text-black">10% (2021)</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 z-10">
+                <svg
+                  width="58"
+                  height="58"
+                  viewBox="0 0 58 58"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="29.0031" cy="29.167" r="28.5119" fill="#00B6F0" />
+                  <path
+                    d="M27.4903 18.4347C27.5989 18.3695 27.7618 18.3369 27.9791 18.3369H31.9219C32.0305 18.3369 32.1174 18.3804 32.1825 18.4673C32.2694 18.5325 32.3129 18.6193 32.3129 18.728V40.7555C32.3129 40.8641 32.2694 40.9618 32.1825 41.0487C32.1174 41.1139 32.0305 41.1465 31.9219 41.1465H28.1094C28.0008 41.1465 27.903 41.1139 27.8161 41.0487C27.751 40.9618 27.7184 40.8641 27.7184 40.7555V22.8989C27.7184 22.8554 27.6967 22.812 27.6532 22.7685C27.6098 22.7251 27.5663 22.7142 27.5229 22.7359L24.297 23.6157L24.1666 23.6483C23.9711 23.6483 23.8734 23.5288 23.8734 23.2899L23.7756 20.4876C23.7756 20.2703 23.8734 20.1183 24.0689 20.0314L27.4903 18.4347Z"
+                    fill="white"
+                  />
+                </svg>
+                <div class="flex flex-col">
+                  <p class="text-[#848484] text-lg">Timeline 1:</p>
+                  <p class="font-semibold text-2xl text-black">10% (2021)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="collapse">
+          <input type="checkbox" class="peer" />
+          <div
+            class="collapse-title flex justify-between items-center bg-white text-black font-bold text-xl b-0 peer-checked:rounded-b-none peer-checked:border-b-0 md:border border-[#DEDEDE] rounded-xl"
+          >
+            <p>Extra Details</p>
+            <svg
+              width="23"
+              height="14"
+              viewBox="0 0 23 14"
+              fill="none"
+              class="rotate-0"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M21 2L11.5 11.5L2 2"
+                stroke="#1E1E1E"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div
+            class="collapse-content bg-white peer-checked:border md:peer-checked:border-t-0 border-[#DEDEDE] rounded-xl md:rounded-b-xl md:rounded-t-none peer-checked:pt-3 mx-4 md:mx-0"
+          >
+            <div class="py-3">
+              <p class="text-black font-semibold text-lg pb-2">
+                Recent Updates 1:
+              </p>
+              <p class="text-[#848484]">
+                A CM dashboard portal that will be accessible by the public,
+                where the public can view various projects/schemes updates
+                launched by the government and its departments. Dashboard should
+                have an infographic view in 2-4 chart formats.
+              </p>
+            </div>
+            <div class="py-3">
+              <p class="text-black font-semibold text-lg pb-2">
+                Recent Updates 2:
+              </p>
+              <p class="text-[#848484]">
+                A CM dashboard portal that will be accessible by the public,
+                where the public can view various projects/schemes updates
+                launched by the government and its departments. Dashboard should
+                have an infographic view in 2-4 chart formats.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-[#00B6F0] w-[412px] h-[62px] flex items-center justify-center text-white mx-auto my-4 rounded-md"
+    >
+      Rate us
+    </div>
     <script>
       const allCollapse = document.querySelectorAll('.collapse');
       [...allCollapse].forEach((collapse) =>
@@ -384,6 +634,77 @@
           )
         )
       );
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.js"
+      integrity="sha512-Lii3WMtgA0C0qmmkdCpsG0Gjr6M0ajRyQRQSbTF6BsrVh/nhZdHpVZ76iMIPvQwz1eoXC3DmAg9K51qT5/dEVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      new Chart(document.getElementById('bar-chart-grouped'), {
+        type: 'bar',
+        data: {
+          labels: ['1900', '1950', '1999', '2050'],
+          datasets: [
+            {
+              label: 'Period 1',
+              backgroundColor: '#0086B0',
+              data: [133, 221, 783, 2478],
+              borderRadius: 10,
+              display: 'end',
+            },
+            {
+              label: 'Period 2',
+              backgroundColor: '#00B6F0',
+              data: [408, 547, 675, 734],
+              borderRadius: 10,
+            },
+          ],
+        },
+        options: {
+          
+          title: {
+            display: true,
+            text: 'Population growth (millions)',
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: 'bottom',
+              maxWidth: 27,
+              maxHeight: 27,
+            },
+          },
+        },
+      });
+      const polarData = {
+        labels: ['Team 1', 'Team 2', 'Team 3', 'Team 4'],
+        datasets: [
+          {
+            label: 'Dataset 1',
+            data: [52.8, 89.8, 9.8, 45.8],
+            backgroundColor: ['#22C83B', '#00B6F0', '#E6E5E6', '#0086B0'],
+          },
+        ],
+      };
+
+      const polarConfig = {
+        type: 'polarArea',
+        data: polarData,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false,
+              position: 'right',
+            },
+          },
+        },
+      };
+      const x = document.getElementById('polar').getContext('2d');
+      new Chart(x, polarConfig);
     </script>
   </body>
 </html>

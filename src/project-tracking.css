@@ -2648,6 +2648,18 @@ body[dir="rtl"] .checkbox:checked,
   right: 0.5rem;
 }
 
+.top-12 {
+  top: 3rem;
+}
+
+.left-\[26px\] {
+  left: 26px;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -2655,6 +2667,16 @@ body[dir="rtl"] .checkbox:checked,
 .mx-4 {
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-12 {
@@ -2741,6 +2763,14 @@ body[dir="rtl"] .checkbox:checked,
   height: 62px;
 }
 
+.h-\[436px\] {
+  height: 436px;
+}
+
+.max-h-\[436px\] {
+  max-height: 436px;
+}
+
 .w-14 {
   width: 3.5rem;
 }
@@ -2793,6 +2823,14 @@ body[dir="rtl"] .checkbox:checked,
   width: 282px;
 }
 
+.w-\[412px\] {
+  width: 412px;
+}
+
+.w-\[555px\] {
+  width: 555px;
+}
+
 .max-w-\[75rem\] {
   max-width: 75rem;
 }
@@ -2807,6 +2845,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .max-w-\[1200px\] {
   max-width: 1200px;
+}
+
+.max-w-\[555px\] {
+  max-width: 555px;
 }
 
 .rotate-0 {
@@ -2903,6 +2945,31 @@ body[dir="rtl"] .checkbox:checked,
   gap: 1.5rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-40 {
+  gap: 10rem;
+}
+
+.divide-x > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.divide-\[\#9E9EA1\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(158 158 161 / var(--tw-divide-opacity));
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -2972,6 +3039,11 @@ body[dir="rtl"] .checkbox:checked,
   border-color: #868F9959;
 }
 
+.border-\[\#9E9EA1\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(158 158 161 / var(--tw-border-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -3000,6 +3072,16 @@ body[dir="rtl"] .checkbox:checked,
 .bg-\[\#1E1E1E\] {
   --tw-bg-opacity: 1;
   background-color: rgb(30 30 30 / var(--tw-bg-opacity));
+}
+
+.bg-\[white\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 1 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#848484\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(132 132 132 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -3042,6 +3124,21 @@ body[dir="rtl"] .checkbox:checked,
   padding-bottom: 0.5rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-40 {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -3068,6 +3165,22 @@ body[dir="rtl"] .checkbox:checked,
 
 .pt-\[42px\] {
   padding-top: 42px;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .text-left {
@@ -3153,6 +3266,11 @@ body[dir="rtl"] .checkbox:checked,
   font-size: 32px;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -3192,6 +3310,16 @@ body[dir="rtl"] .checkbox:checked,
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-\[black\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 1 / var(--tw-text-opacity));
+}
+
+.text-\[\#1E1E1E\] {
+  --tw-text-opacity: 1;
+  color: rgb(30 30 30 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -3379,6 +3507,10 @@ footer {
     padding-bottom: 2rem;
   }
 
+  .sm\:pt-0 {
+    padding-top: 0px;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
@@ -3447,6 +3579,12 @@ footer {
     flex-direction: row;
   }
 
+  .md\:divide-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-reverse: 0;
+    border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
+    border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
+  }
+
   .md\:rounded-b-xl {
     border-bottom-right-radius: 0.75rem;
     border-bottom-left-radius: 0.75rem;
@@ -3472,6 +3610,10 @@ footer {
 
   .md\:pt-\[88px\] {
     padding-top: 88px;
+  }
+
+  .md\:pt-0 {
+    padding-top: 0px;
   }
 
   .md\:text-\[58px\] {

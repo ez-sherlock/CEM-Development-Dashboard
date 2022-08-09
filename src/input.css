@@ -47,3 +47,8 @@ footer {
     font-size: 11px;
   }
 }
+
+.collapse-title,
+.collapse > input[type='checkbox'] {
+  padding-right: 1rem;
+}

@@ -1,5 +1,13 @@
 {
+  "name": "CEM-DEVELOPMENT-DASHBOARD",
+  "version": "1.0.0",
+  "scripts": {
+    "tailwindcss": "npx tailwindcss -i ./src/input.css -o ./src/project-tracking.css --watch"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "daisyui": "^2.22.0"
   }
 }

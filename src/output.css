@@ -1052,50 +1052,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-body {
-  font-family: 'Barlow', sans-serif;
-}
-
-progress {
-  border: none;
-  background: #22c83b;
-  border-radius: 20px;
-  width: 197px;
-  height: 5px;
-}
-
-progress::-moz-progress-bar {
-  border: none;
-  background: lightcolor;
-  border-radius: 20px;
-}
-
-progress::-webkit-progress-value {
-  background: #22c83b;
-  border: none;
-  border-radius: 20px;
-}
-
-progress::-webkit-progress-bar {
-  background: #f2f2f2;
-  border-radius: 20px;
-  border: none;
-}
-
-footer {
-  background: #00b6f0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: right;
-}
-
-@media (max-width: 40rem) {
-  .email--input,
-  .email--input::-webkit-input-placeholder {
-    font-size: 11px;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:block {
     display: block;

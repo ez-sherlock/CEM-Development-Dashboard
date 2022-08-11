@@ -2644,6 +2644,14 @@ body[dir="rtl"] .checkbox:checked,
   left: 21rem;
 }
 
+.-top-\[0rem\] {
+  top: -0rem;
+}
+
+.left-\[6rem\] {
+  left: 6rem;
+}
+
 .right-2 {
   right: 0.5rem;
 }
@@ -2933,6 +2941,10 @@ body[dir="rtl"] .checkbox:checked,
   gap: 1.75rem;
 }
 
+.gap-40 {
+  gap: 10rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -3058,6 +3070,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
 
 .py-7 {
@@ -3202,6 +3218,11 @@ body[dir="rtl"] .checkbox:checked,
 
 .text-\[32px\] {
   font-size: 32px;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -3486,6 +3507,14 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .md\:-top-\[3rem\] {
+    top: -3rem;
+  }
+
+  .md\:left-\[14rem\] {
+    left: 14rem;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;

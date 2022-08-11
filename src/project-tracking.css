@@ -2644,6 +2644,14 @@ body[dir="rtl"] .checkbox:checked,
   left: 21rem;
 }
 
+.-top-\[0rem\] {
+  top: -0rem;
+}
+
+.left-\[6rem\] {
+  left: 6rem;
+}
+
 .right-2 {
   right: 0.5rem;
 }
@@ -2763,10 +2771,6 @@ body[dir="rtl"] .checkbox:checked,
   height: 62px;
 }
 
-.h-\[436px\] {
-  height: 436px;
-}
-
 .max-h-\[436px\] {
   max-height: 436px;
 }
@@ -2825,10 +2829,6 @@ body[dir="rtl"] .checkbox:checked,
 
 .w-\[412px\] {
   width: 412px;
-}
-
-.w-\[555px\] {
-  width: 555px;
 }
 
 .max-w-\[75rem\] {
@@ -2941,28 +2941,16 @@ body[dir="rtl"] .checkbox:checked,
   gap: 1.75rem;
 }
 
+.gap-40 {
+  gap: 10rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
 
 .gap-10 {
   gap: 2.5rem;
-}
-
-.gap-40 {
-  gap: 10rem;
-}
-
-.divide-x > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-x-reverse: 0;
-  border-right-width: calc(1px * var(--tw-divide-x-reverse));
-  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
-}
-
-.divide-y > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-y-reverse: 0;
-  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
-  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
 .divide-\[\#9E9EA1\] > :not([hidden]) ~ :not([hidden]) {
@@ -3000,11 +2988,6 @@ body[dir="rtl"] .checkbox:checked,
   border-bottom-right-radius: 0.5rem;
 }
 
-.rounded-b-xl {
-  border-bottom-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-}
-
 .border {
   border-width: 1px;
 }
@@ -3039,11 +3022,6 @@ body[dir="rtl"] .checkbox:checked,
   border-color: #868F9959;
 }
 
-.border-\[\#9E9EA1\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(158 158 161 / var(--tw-border-opacity));
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -3074,16 +3052,6 @@ body[dir="rtl"] .checkbox:checked,
   background-color: rgb(30 30 30 / var(--tw-bg-opacity));
 }
 
-.bg-\[white\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 1 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#848484\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(132 132 132 / var(--tw-bg-opacity));
-}
-
 .p-4 {
   padding: 1rem;
 }
@@ -3104,6 +3072,10 @@ body[dir="rtl"] .checkbox:checked,
   padding: 1.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .py-7 {
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -3112,6 +3084,11 @@ body[dir="rtl"] .checkbox:checked,
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .py-3 {
@@ -3124,21 +3101,6 @@ body[dir="rtl"] .checkbox:checked,
   padding-bottom: 0.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-40 {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -3149,6 +3111,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .pt-12 {
   padding-top: 3rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pt-\[80px\] {
@@ -3167,20 +3133,8 @@ body[dir="rtl"] .checkbox:checked,
   padding-top: 42px;
 }
 
-.pt-3 {
-  padding-top: 0.75rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
+.pt-16 {
+  padding-top: 4rem;
 }
 
 .text-left {
@@ -3307,19 +3261,14 @@ body[dir="rtl"] .checkbox:checked,
   color: rgb(57 208 116 / var(--tw-text-opacity));
 }
 
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-\[black\] {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 1 / var(--tw-text-opacity));
-}
-
 .text-\[\#1E1E1E\] {
   --tw-text-opacity: 1;
   color: rgb(30 30 30 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -3394,10 +3343,6 @@ footer {
 
 .peer:checked ~ .peer-checked\:border-b-0 {
   border-bottom-width: 0px;
-}
-
-.peer:checked ~ .peer-checked\:border-t-0 {
-  border-top-width: 0px;
 }
 
 .peer:checked ~ .peer-checked\:pt-3 {
@@ -3497,6 +3442,10 @@ footer {
     padding: 0px;
   }
 
+  .sm\:p-8 {
+    padding: 2rem;
+  }
+
   .sm\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -3505,10 +3454,6 @@ footer {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-  }
-
-  .sm\:pt-0 {
-    padding-top: 0px;
   }
 
   .sm\:text-left {
@@ -3562,6 +3507,14 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .md\:-top-\[3rem\] {
+    top: -3rem;
+  }
+
+  .md\:left-\[14rem\] {
+    left: 14rem;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -3579,10 +3532,8 @@ footer {
     flex-direction: row;
   }
 
-  .md\:divide-y-0 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-y-reverse: 0;
-    border-top-width: calc(0px * calc(1 - var(--tw-divide-y-reverse)));
-    border-bottom-width: calc(0px * var(--tw-divide-y-reverse));
+  .md\:gap-40 {
+    gap: 10rem;
   }
 
   .md\:rounded-b-xl {
@@ -3612,10 +3563,6 @@ footer {
     padding-top: 88px;
   }
 
-  .md\:pt-0 {
-    padding-top: 0px;
-  }
-
   .md\:text-\[58px\] {
     font-size: 58px;
   }
@@ -3628,6 +3575,11 @@ footer {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .peer:checked ~ .md\:peer-checked\:border-t-0 {
